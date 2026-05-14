@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($pio = Get-Command pio -ErrorAction SilentlyContinue; if \\($pio\\) { $pio.Source } else { \"PIO_NOT_IN_PATH\" })",
+      "PowerShell($candidates = @\\(\"$env:USERPROFILE\\\\.platformio\\\\penv\\\\Scripts\\\\pio.exe\", \"$env:LOCALAPPDATA\\\\Programs\\\\PlatformIO\\\\penv\\\\Scripts\\\\pio.exe\"\\); foreach \\($p in $candidates\\) { if \\(Test-Path $p\\) { Write-Output \"FOUND: $p\" } else { Write-Output \"missing: $p\" } })",
+      "PowerShell(& \"C:\\\\Users\\\\ANGEL\\\\.platformio\\\\penv\\\\Scripts\\\\pio.exe\" run -d \"c:\\\\GitHub\\\\Covenant\\\\I2C_scanner\" 2>&1)"
+    ]
+  }
+}
